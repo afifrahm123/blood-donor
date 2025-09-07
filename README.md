@@ -2,13 +2,13 @@
 Blood Donation System
 
 ### Introduction
-The Blood Donation System is a comprehensive web-based platform designed to streamline and manage the entire process of blood donation. It connects donors, patients, and administrators, facilitating efficient scheduling of donations, management of blood requests, and real-time monitoring of blood inventory.
+The Blood Donation System is a comprehensive web-based platform designed to streamline and manage the entire process of blood donation. It connects Users and administrators, facilitating efficient scheduling of donations, management of blood requests, and real-time monitoring of blood inventory.
 
 ### Objective of The Project
 The primary objectives of this project are:
 *   To create a centralized platform for managing blood donations and requests.
-*   To provide an intuitive interface for donors to schedule appointments and view their donation history.
-*   To enable patients to easily submit and track their blood requests.
+*   To provide an intuitive interface for users to schedule appointments and view their donation history.
+*   To enable users to easily submit and track their blood requests.
 *   To empower administrators with tools for comprehensive user management, request approval, and inventory oversight.
 *   To enhance the efficiency and accessibility of blood donation services through technology.
 *   To ensure secure and role-based access for different user types within the system.
@@ -27,8 +27,8 @@ Based on the review, the limitations of many existing blood donation systems inc
 
 ### Outcomes of The Project
 This project aims to address the aforementioned limitations by delivering the following outcomes:
-*   **Automated Scheduling and Management**: Donors can schedule donations online, and the system enforces rules like the 56-day interval, significantly reducing manual effort and errors.
-*   **Streamlined Request Process**: Patients can submit blood requests digitally and track their status in real-time, improving response times.
+*   **Automated Scheduling and Management**: users can schedule donations online, and the system enforces rules like the 56-day interval, significantly reducing manual effort and errors.
+*   **Streamlined Request Process**: users can submit blood requests digitally and track their status in real-time, improving response times.
 *   **Real-time Blood Inventory**: Administrators gain a comprehensive dashboard to monitor blood stock, distribution, and request urgency, optimizing resource allocation.
 *   **Enhanced Accessibility**: A web-based platform makes blood donation and requesting services accessible from anywhere, encouraging broader participation.
 *   **Data-Driven Insights**: The system provides real-time statistics and analytics, enabling better decision-making for blood type distribution and demand forecasting.
@@ -73,7 +73,7 @@ To set up and run the Blood Donation System, follow these steps:
 
 2.  **Clone the Repository**:
 ```bash
-git clone <repository-url>
+git clone <https://github.com/afifrahm123/blood-donor>
 cd Project_Final
 ```
 
@@ -92,9 +92,9 @@ cp config.env.example config.env
         ```
     *   Update `config.env` with your MongoDB URI, JWT secret, and port:
         ```
-MONGODB_URI=mongodb://localhost:27017/blood-donation
-JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
-PORT=5000
+MONGODB_URI="mongodb+srv://mdafifn_db_user:RNrFuHRmLJgUZneb@cluster0.qmlfds5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+JWT_SECRET="your-super-secret-jwt-key-change-this-in-production"
+NODE_ENV="prduction"
         ```
     *   Seed the database with initial data (optional, for development):
         ```bash
@@ -131,7 +131,7 @@ Once both backend and frontend servers are running, you can access the applicati
 **Key Features**:
 The Blood Donation System offers a robust set of features categorized by user roles:
 
-*   **Authentication & User Management**: Secure registration and login, JWT-based authentication, role-based access control (Admin, Donor, Patient), and secure password hashing with bcrypt. Users can update their profiles.
+*   **Authentication & User Management**: Secure registration and login, JWT-based authentication, role-based access control (Admin, user), and secure password hashing with bcrypt. Users can update their profiles.
 *   **User Features**: Users can schedule blood donations, view their donation history, and check their eligibility based on the 56-day rule between donations. Users can submit blood requests, track the real-time status of their requests, and view their request history.
 *   **Admin Features**: Administrators have a centralized control panel to manage all users, approve or reject blood requests, monitor the overall blood inventory, and access system statistics.
 *   **Dashboard & Analytics**: Provides real-time statistics, blood type distribution insights, and tracks request urgency and donation scheduling.
