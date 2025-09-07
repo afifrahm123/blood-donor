@@ -23,41 +23,39 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// MongoDB Connection with improved settings for Vercel
+// MongoDB Connection - Simple approach for Vercel
 const connectDB = async () => {
   try {
     const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/blood-donation';
     
-    await mongoose.connect(mongoUri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
-      socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
-      bufferMaxEntries: 0, // Disable mongoose buffering
-      bufferCommands: false, // Disable mongoose buffering
-    });
+    // Simple connection without complex options
+    await mongoose.connect(mongoUri);
     
     console.log('Connected to MongoDB');
+    return true;
   } catch (err) {
     console.error('MongoDB connection error:', err);
-    // Don't exit process in serverless environment
-    if (process.env.NODE_ENV !== 'production') {
-      process.exit(1);
-    }
+    return false;
   }
 };
 
+// Initialize connection
 connectDB();
 
-// Database connection check middleware
+// Simple middleware - just check if mongoose is connected
 app.use((req, res, next) => {
-  if (mongoose.connection.readyState !== 1) {
-    return res.status(503).json({ 
-      success: false, 
-      message: 'Database connection not ready' 
+  if (mongoose.connection.readyState === 1) {
+    next();
+  } else {
+    // Try to reconnect
+    connectDB().then(() => next()).catch(err => {
+      res.status(503).json({ 
+        success: false, 
+        message: 'Database unavailable',
+        error: err.message 
+      });
     });
   }
-  next();
 });
 
 // Routes
