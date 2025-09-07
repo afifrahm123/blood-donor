@@ -1,0 +1,577 @@
+/* Admin Blood Requests Styles */
+.admin-blood-requests {
+  padding: 20px;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.page-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.filters-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.filter-group select {
+  padding: 8px 12px;
+  border: 2px solid #e1e1e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.request-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #667eea;
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.request-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.patient-info {
+  font-size: 1.1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.donor-request-badge {
+  background: #28a745;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.donor-interest-indicator {
+  background: #ff6b35;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 6px rgba(255, 107, 53, 0.3);
+  animation: pulse-interest 2s infinite;
+}
+
+@keyframes pulse-interest {
+  0% {
+    box-shadow: 0 2px 6px rgba(255, 107, 53, 0.3);
+  }
+  50% {
+    box-shadow: 0 2px 12px rgba(255, 107, 53, 0.6);
+  }
+  100% {
+    box-shadow: 0 2px 6px rgba(255, 107, 53, 0.3);
+  }
+}
+
+.request-date,
+.request-required {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.request-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status-badge,
+.urgency-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-approved {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-fulfilled {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-cancelled {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.urgency-low {
+  background: #d4edda;
+  color: #155724;
+}
+
+.urgency-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.urgency-high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.urgency-critical {
+  background: #721c24;
+  color: white;
+}
+
+.request-details {
+  margin-bottom: 20px;
+}
+
+.primary-info {
+  margin-bottom: 15px;
+}
+
+.more-info-section {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 15px;
+}
+
+.more-info-toggle {
+  background: none;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.more-info-toggle:hover {
+  color: #5a67d8;
+}
+
+.more-info-content {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #666;
+  min-width: 120px;
+}
+
+.detail-value {
+  color: #333;
+  text-align: right;
+  flex: 1;
+  margin-left: 20px;
+}
+
+.request-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.update-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.update-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.page-btn {
+  padding: 8px 16px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: #666;
+  font-weight: 500;
+}
+
+.no-requests {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal h3 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.modal .form-group {
+  margin-bottom: 20px;
+}
+
+.modal .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.modal .form-group select,
+.modal .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e1e1e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.modal .form-group select:focus,
+.modal .form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.modal .form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #5a6268;
+}
+
+/* Donor Interest Section Styles */
+.donor-interest-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.interest-count {
+  display: block;
+  font-weight: 600;
+  color: #28a745;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.interested-donors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.interested-donor {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+  border-left: 4px solid #28a745;
+}
+
+.donor-name {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.donor-contact {
+  display: block;
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.donor-blood-type {
+  display: block;
+  color: #007bff;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.patient-info .donation-badge,
+.patient-info .request-badge {
+  margin-left: 10px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.patient-info .badge-life-saver {
+  background-color: #e3f2fd; /* Lighter Blue */
+  color: #1e88e5; /* Medium Blue */
+}
+
+.patient-info .badge-hope-giver {
+  background-color: #fce4ec; /* Lighter Red/Pink */
+  color: #e91e63; /* Medium Red */
+}
+
+.patient-info .badge-guardian-angel {
+  background-color: #fffde7; /* Lighter Yellow */
+  color: #fbc02d; /* Medium Yellow */
+}
+
+.patient-info .badge-hope-seeker {
+  background-color: #e8f5e9; /* Light Green */
+  color: #43a047; /* Medium Green */
+}
+
+.patient-info .badge-life-fighter {
+  background-color: #ffe0b2; /* Light Orange */
+  color: #fb8c00; /* Medium Orange */
+}
+
+.patient-info .badge-survivor-spirit {
+  background-color: #e0f7fa; /* Light Cyan */
+  color: #00acc1; /* Medium Cyan */
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-blood-requests {
+    padding: 15px;
+  }
+  
+  .filters-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .filter-group select {
+    min-width: 100%;
+  }
+  
+  .request-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .request-badges {
+    align-self: flex-start;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .detail-value {
+    text-align: left;
+    margin-left: 0;
+  }
+  
+  .more-info-content {
+    padding: 10px;
+  }
+  
+  .more-info-toggle {
+    font-size: 0.85rem;
+  }
+  
+  .modal {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+}

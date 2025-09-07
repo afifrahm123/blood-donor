@@ -1,0 +1,107 @@
+.patient-login {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.patient-login h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.patient-login .form-group {
+  margin-bottom: 15px;
+}
+
+.patient-login .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffcc00;
+}
+
+.patient-login .form-group input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.patient-login .form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.patient-login button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.patient-login button:hover:not(:disabled) {
+  background-color: #e6b800;
+}
+
+.patient-login button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #ff6b6b;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  text-align: center;
+}
+
+.login-info {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.login-info code {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: monospace;
+  color: #ffcc00;
+}
+
+.register-message {
+  text-align: center;
+  margin-top: 20px;
+  color: #ffcc00;
+}
+
+.register-message span {
+  color: rgb(215, 220, 230);
+  cursor: pointer;
+}
+
+.register-message span:hover {
+  text-decoration: underline;
+}
